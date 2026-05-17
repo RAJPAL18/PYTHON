@@ -1,0 +1,68 @@
+# 20) Continuous Diamond Numbers
+#            1
+#           2 3
+#          4 5 6
+#         7 8 9 10
+#          4 5 6
+#           2 3
+#            1
+
+
+n=int(input("enter the number "))
+cnt=1
+
+for i in range(1,n+1):
+    if i%2==0:
+        next=n+i-1
+        prev=n-i+1
+        for j in range(1,2*n):
+            if j>=prev and j<=next:
+                if j%2!=0:
+                    print(cnt,end="")
+                    cnt+=1
+                else:
+                    print(" ",end="")
+            else:
+                print(" ",end="")
+        print()
+    else:
+        next=n+i-1
+        prev=n-i+1
+        for j in range(1,2*n):
+            if j>=prev and j<=next:
+                if j%2==0:
+                    print(cnt,end="")
+                    cnt+=1
+                else:
+                    print(" ",end="")
+            else:
+                print(" ",end="")
+        print()
+x=7
+for i in range(3,0):                             # JUST to print logic is too bad and only work for n=4
+    x=x-i+1
+    a=x
+    if i%2!=0:    
+        for j in range(1,2*n):
+            if j%2==0:
+                print(a,end="")
+                a+=1
+            else:
+                print(" ",end="")
+        print()
+    else:
+        for j in range(1,2*n):
+            if j%2!=0:
+                print(a,end="")
+                a+=1
+            else:
+                print(" ",end="")
+        print()
+
+
+
+
+
+    
+
+    
